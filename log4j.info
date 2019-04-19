@@ -1,0 +1,46 @@
+# Set root logger level to DEBUG and its only appender to A1.
+# TRACE, DEBUG, INFO, WARN, ERROR and FATAL
+
+
+log4j.rootLogger=INFO, FILE
+
+# Define the file appender
+log4j.appender.FILE=org.apache.log4j.FileAppender
+
+# Set the name of the file
+log4j.appender.FILE.File=\\cin/log5.out
+
+# Set the immediate flush to true (default)
+log4j.appender.FILE.ImmediateFlush=true
+
+# Set the threshold to debug mode
+log4j.appender.FILE.Threshold=debug
+
+# Set the append to false, overwrite
+log4j.appender.FILE.Append=false
+
+# Define the layout for file appender
+log4j.appender.FILE.layout=org.apache.log4j.PatternLayout
+log4j.appender.FILE.layout.conversionPattern=%d %m%n
+
+# A1 is set to be a ConsoleAppender.
+log4j.appender.A1=org.apache.log4j.ConsoleAppender
+
+# A1 uses PatternLayout.
+log4j.appender.A1.layout=org.apache.log4j.PatternLayout
+log4j.appender.A1.layout.ConversionPattern=%d %m%n
+
+## Execution logging
+log4j.logger.org.apache.jena.arq.info=INFO
+log4j.logger.org.apache.jena.arq.exec=INFO
+
+## TDB loader
+log4j.logger.org.apache.jena.tdb.loader=INFO
+## TDB syslog.
+log4j.logger.TDB=INFO
+
+## Everything else in Jena
+log4j.logger.org.apache.jena=FATAL
+log4j.logger.org.openjena=FATAL
+log4j.logger.org.openjena.riot=INFO
+
