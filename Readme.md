@@ -4,6 +4,8 @@ This app was designed to extract information from professor profile sites of Uni
 [https://researchdirectory.uc.edu/] . 
 Extracted information is written across 15 tables in a PostGreSQL database.
 
+Developer written LOC(lines of code) ~ 2800
+
 #### Technologies Used:
 - Java language
 - jsoup library
